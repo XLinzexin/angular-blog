@@ -1,0 +1,14 @@
+<div class="nav-container">
+  <div class="container">
+    <ul nz-menu [nzMode]="'horizontal'">
+      <li
+        nz-menu-item
+        *ngFor="let route of routes"
+        [nzSelected]="route.selected"
+      >
+        <i nz-icon [type]="route.icon"></i>
+        <a [routerLink]="route.path">{{ route.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
